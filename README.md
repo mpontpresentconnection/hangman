@@ -1,47 +1,35 @@
-# Astro Starter Kit: Minimal
+# The hangman game
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## The main goal
+The goal of this project is improve the frontend skills.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+The project consists of playing the hangman game against the computer, which will choose a word at random. Difficulty level can be set.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Technologies
+- [Astro framework](https://astro.build/)
+- [Tailwind](https://tailwindcss.com/)
+- Combine different UI Frameworks:
+    - [Vue](https://vuejs.org/)
+    - [React](https://react.dev/)
+    - [Svelte](https://svelte.dev/)
+- Deploy the project using [Vercel](https://vercel.com/)
 
-## 🚀 Project Structure
+## Modules & Services
 
-Inside of your Astro project, you'll see the following folders and files:
+### Generate password (TS)
+Generate a random word. The password.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Password discovery (React)
+Watch how the user is guessing the password. Showing the correct letters and hiding the others.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Letter pick (Vue)
+Collection of letters for guess the password. Those that are used will be disabled.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Drawing hangman (Svelte)
+Show the picture of the hangman. Every time the user misses a letter, Will advance one more step.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Instructions (Vue)
+Show how to play the game.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Change difficulty (React)
+The difficulty affects the length of the password and the attempts to guess it by picking letters.
