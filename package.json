@@ -5,6 +5,8 @@
   "scripts": {
     "lint:check": "eslint --ext .js,.ts,.astro,.vue ./",
     "lint:fix": "eslint --ext .js,.ts,.astro,.vue --fix ./",
+    "format:check": "prettier --check \"**/*.{js,ts,astro,vue}\"",
+    "format:fix": "prettier --write \"**/*.{js,ts,astro,vue}\"",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -32,6 +34,8 @@
     "@vue/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.51.0",
     "eslint-plugin-astro": "^0.29.1",
-    "eslint-plugin-vue": "^9.17.0"
+    "eslint-plugin-vue": "^9.17.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }
