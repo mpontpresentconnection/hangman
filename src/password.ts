@@ -1,3 +1,3 @@
 export const generate = () => {
-  return 'cat'
+  return 'CAT'
 }

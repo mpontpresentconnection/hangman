@@ -22,7 +22,7 @@ Generate a random word. The password.
 ### Password discovery (React)
 Watch how the user is guessing the password. Showing the correct letters and hiding the others.
 
-### Letter pick (Vue)
+### Pick letter (Vue)
 Collection of letters for guess the password. Those that are used will be disabled.
 
 ### Drawing hangman (Svelte)
