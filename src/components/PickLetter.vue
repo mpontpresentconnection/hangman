@@ -1,5 +1,5 @@
 <template>
-  <div class="p-12">
+  <div v-if="password" class="p-12">
     <div
       v-for="(line, i) in collection"
       :key="i"
@@ -21,6 +21,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useStore } from '@nanostores/vue'
+import { passwordStore } from '../store'
+
+const password = useStore(passwordStore)
 const collection = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
   ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],

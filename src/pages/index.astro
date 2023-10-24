@@ -28,10 +28,11 @@ import PickLetter from '../components/PickLetter.vue'
     </main>
     <script>
       import { generate } from '../password'
-      import { password } from '../store'
+      import { passwordStore } from '../store'
 
       document.getElementById('start').addEventListener('click', () => {
-        password.set(generate())
+        passwordStore.set(generate())
+        document.getElementById('start').className = 'hidden'
       })
     </script>
   </body>
