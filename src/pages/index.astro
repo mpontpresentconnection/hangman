@@ -1,5 +1,6 @@
 ---
 import PasswordDiscovery from '../components/PasswordDiscovery.tsx'
+import DrawingHangman from '../components/DrawingHangman.svelte'
 import PickLetter from '../components/PickLetter.vue'
 ---
 
@@ -24,6 +25,7 @@ import PickLetter from '../components/PickLetter.vue'
         Start
       </button>
       <PasswordDiscovery client:load />
+      <DrawingHangman client:load />
       <PickLetter client:load />
     </main>
     <script>
