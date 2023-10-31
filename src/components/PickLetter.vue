@@ -9,6 +9,7 @@
         v-for="letter in line"
         :key="letter"
         class="flex"
+        :disabled="letters.includes(letter)"
         @click="clickHandler(letter)"
       >
         <kbd
@@ -22,9 +23,11 @@
 </template>
 <script setup lang="ts">
 import { useStore } from '@nanostores/vue'
-import { passwordStore } from '../store'
+import { passwordStore, lettersStore, mistakesStore } from '../store'
 
 const password = useStore(passwordStore)
+const letters = useStore(lettersStore)
+const mistakes = useStore(mistakesStore)
 const collection = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
   ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
@@ -32,6 +35,9 @@ const collection = [
 ]
 
 const clickHandler = (letter: string) => {
-  console.log('click!', letter)
+  lettersStore.set([...letters.value, letter])
+  if (!password.value.includes(letter)) {
+    mistakesStore.set(mistakes.value + 1)
+  }
 }
 </script>
