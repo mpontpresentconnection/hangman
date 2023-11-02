@@ -1,5 +1,5 @@
 <template>
-  <div v-if="password" class="p-12">
+  <div v-if="isGameStarted" class="p-12">
     <div
       v-for="(line, i) in collection"
       :key="i"
@@ -9,7 +9,7 @@
         v-for="letter in line"
         :key="letter"
         class="flex"
-        :disabled="letters.includes(letter)"
+        :disabled="letters.includes(letter) || isGameOver"
         @click="clickHandler(letter)"
       >
         <kbd
@@ -23,8 +23,16 @@
 </template>
 <script setup lang="ts">
 import { useStore } from '@nanostores/vue'
-import { passwordStore, lettersStore, mistakesStore } from '../store'
+import {
+  getIsGameStarted,
+  getIsGameOver,
+  passwordStore,
+  lettersStore,
+  mistakesStore,
+} from '../store'
 
+const isGameStarted = useStore(getIsGameStarted)
+const isGameOver = useStore(getIsGameOver)
 const password = useStore(passwordStore)
 const letters = useStore(lettersStore)
 const mistakes = useStore(mistakesStore)
