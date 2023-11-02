@@ -24,15 +24,15 @@
 <script setup lang="ts">
 import { useStore } from '@nanostores/vue'
 import {
-  getIsGameStarted,
-  getIsGameOver,
+  isGameStartedGetter,
+  isGameOverGetter,
   passwordStore,
   lettersStore,
   mistakesStore,
 } from '../store'
 
-const isGameStarted = useStore(getIsGameStarted)
-const isGameOver = useStore(getIsGameOver)
+const isGameStarted = useStore(isGameStartedGetter)
+const isGameOver = useStore(isGameOverGetter)
 const password = useStore(passwordStore)
 const letters = useStore(lettersStore)
 const mistakes = useStore(mistakesStore)
