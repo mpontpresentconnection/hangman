@@ -18,11 +18,18 @@
 </script>
 
 {#if $isGameStartedGetter}
-  <img
-    class="mx-auto"
-    src="/hangman/{$mistakesStore}.png"
-    alt="{$mistakesStore} mistake"
-  />
+  <div
+    class="border-4 border-gray-600 border-opacity-20 mx-auto"
+    style="width: 300px; height: 400px"
+  >
+    {#if $mistakesStore > 0}
+      <img
+        class="mx-auto"
+        src="/hangman/{$mistakesStore}.png"
+        alt="{$mistakesStore} mistake"
+      />
+    {/if}
+  </div>
   <p class="text-white">Number of mistakes: {$mistakesStore}</p>
   {#if $isGameOverGetter}
     <p class="text-red-300 font-bold">Game Over!</p>

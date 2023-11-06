@@ -5,7 +5,7 @@
 </script>
 
 {#if !$isGameStartedGetter}
-  <div class="h-full">
+  <div>
     <button
       on:click={startGame}
       id="start"
