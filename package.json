@@ -3,10 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "lint:check": "eslint --ext .js,.ts,.astro,.vue ./",
-    "lint:fix": "eslint --ext .js,.ts,.astro,.vue --fix ./",
-    "format:check": "prettier --check \"**/*.{js,ts,astro,vue}\"",
-    "format:fix": "prettier --write \"**/*.{js,ts,astro,vue}\"",
+    "lint:check": "eslint --ext .js,.ts,tsx,svelte,.astro,.vue ./",
+    "lint:fix": "eslint --ext .js,.ts,tsx,svelte,.astro,.vue --fix ./",
+    "format:check": "prettier --check \"**/*.{js,ts,tsx,svelte,astro,vue}\"",
+    "format:fix": "prettier --write \"**/*.{js,ts,tsx,svelte,astro,vue}\"",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -39,6 +39,7 @@
     "eslint-plugin-svelte": "^2.34.0",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-svelte": "^3.0.3"
   }
 }

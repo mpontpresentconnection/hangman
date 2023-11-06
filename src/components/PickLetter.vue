@@ -1,5 +1,8 @@
 <template>
-  <div v-if="isGameStarted" class="p-12">
+  <div
+    v-if="isGameStarted"
+    class="p-12"
+  >
     <div
       v-for="(line, i) in collection"
       :key="i"
