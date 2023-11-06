@@ -4,7 +4,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:vue/vue3-recommended',
         'plugin:svelte/recommended',
-        '@vue/eslint-config-typescript'
+        '@vue/eslint-config-typescript',
+        'prettier'
     ],
     overrides: [
         {
