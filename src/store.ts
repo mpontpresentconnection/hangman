@@ -28,7 +28,7 @@ export const isGameWonGetter: ReadableAtom<boolean> = computed(
       .every((letter: string): boolean => letters.includes(letter)),
 )
 export const isGameFinishedGetter: ReadableAtom<boolean> = computed(
-  [isGameOverGetter, isGameStartedGetter],
+  [isGameOverGetter, isGameWonGetter],
   (isGameOver: boolean, isGameWon: boolean): boolean => isGameOver || isGameWon,
 )
 export const resetMistakesAction = action(
