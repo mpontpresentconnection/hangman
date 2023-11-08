@@ -20,14 +20,14 @@
 {#if $isGameStartedGetter}
   <div class="container text-center">
     <div
-      class="border-4 border-gray-600 border-opacity-20 mx-auto"
-      style="max-width: 400px; min-height: 400px"
+      class="image-wrapper border-4 border-gray-600 border-opacity-20 mx-auto max-w-sm"
     >
       {#if $mistakesStore > 0}
         <img
           class="mx-auto"
           src="/hangman/{$mistakesStore}.png"
           alt="{$mistakesStore} mistake"
+          height="353px"
         />
       {/if}
     </div>
@@ -50,3 +50,41 @@
     </button>
   </div>
 {/if}
+
+<style>
+  .image-wrapper {
+    height: 400px;
+  }
+  @media (max-height: 800px) {
+    .image-wrapper {
+      height: 350px;
+    }
+    .image-wrapper > img {
+      height: 300px;
+    }
+  }
+  @media (max-height: 750px) {
+    .image-wrapper {
+      height: 300px;
+    }
+    .image-wrapper > img {
+      height: 250px;
+    }
+  }
+  @media (max-height: 700px) {
+    .image-wrapper {
+      height: 220px;
+    }
+    .image-wrapper > img {
+      height: 200px;
+    }
+  }
+  @media (max-height: 600px) {
+    .image-wrapper {
+      height: 160px;
+    }
+    .image-wrapper > img {
+      height: 150px;
+    }
+  }
+</style>
