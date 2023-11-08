@@ -32,6 +32,13 @@ see how integrates with the other frameworks in the Astro framework.
 A service for generating a random word. The password. The only responsibility of this 
 service is to generate a random word.
 
+### Start game (Svelte)
+
+`src/components/StartGame.svelte`
+
+Module for showing the start button. When the user clicks the generate password 
+service will be triggered.
+
 ### Password discovery (React)
 
 `src/components/PasswordDiscovery.tsx`
