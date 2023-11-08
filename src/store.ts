@@ -23,6 +23,7 @@ export const isGameOverGetter: ReadableAtom<boolean> = computed(
 export const isGameWonGetter: ReadableAtom<boolean> = computed(
   [passwordStore, lettersStore],
   (password: string, letters: string[]): boolean =>
+    !!password &&
     password
       .split('')
       .every((letter: string): boolean => letters.includes(letter)),
